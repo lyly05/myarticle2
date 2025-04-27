@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delely's Article</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f9f9;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .top-header {
+            background: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .article-header {
+            padding: 60px 0;
+            text-align: center;
+            background: #fff;
+            margin-bottom: 40px;
+        }
+
+        .article-header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .meta-info {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .meta-info span {
+            margin: 0 15px;
+        }
+
+        .article-content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .article-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .article-content img {
+            width: 100%;
+            height: auto;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        .share-section {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            margin: 40px 0;
+        }
+
+        .share-section h4 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .share-buttons a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 12px 25px;
+            border-radius: 30px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .share-buttons .facebook {
+            background: #3b5998;
+        }
+
+        .share-buttons .twitter {
+            background: #1da1f2;
+        }
+
+        .share-buttons .pinterest {
+            background: #bd081c;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+            padding: 30px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-btn {
+            padding: 15px 30px;
+            border-radius: 30px;
+            background: #f5f5f5;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        .related-posts {
+            padding: 60px 0;
+            background: #fff;
+            margin: 40px 0;
+        }
+
+        .related-posts h3 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .post-card {
+            border: none;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .post-card .card-body {
+            padding: 25px;
+        }
+
+        .comments-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .comment {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comment img {
+            width: 45px;  
+            height: 45px; 
+            object-fit: cover; 
+            border-radius: 50%; 
+        }
+
+        .comment h5 {
+            font-size: 16px; 
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .comment-form {
+            background: #fff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-top: 40px;
+        }
+
+        .form-control {
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        .btn-submit {
+            background: #333;
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 30px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="top-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">Delely's Article</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Article Header -->
+    <div class="article-header">
+        <div class="container">
+            <h1>🎼 "Turning Into Life’s Rhythm"</h1>
+            <div class="meta-info">
+                <span><i class="far fa-user"></i> Delely</span>
+                <span><i class="far fa-calendar"></i> 5 March 20245</span>
+                <span><i class="far fa-comment"></i> 5 Comment</span>
+                <span><i class="far fa-folder"></i> Category</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Article Content -->
+                <article class="article-content">
+                    <img src="img/music2.jpg" alt="Featured Image">
+                    <p>Life is a symphony—each moment a note, every experience a melody. In the hustle of daily routines, we often forget to listen to the music within and around us. "Tuning Into Life’s Rhythm" is an invitation to pause, reflect, and dance to the beat of your own journey. Here, we explore mindfulness, creativity, and the art of finding harmony in chaos. Whether through music, nature, or simple stillness, let’s learn to flow with grace and intention. Turn up the volume of your soul. The world is your soundtrack. 🎶✨</p>
+                    <p>Amidst the monotony of routine and the constant demands, have you ever stopped to feel life, not just live it?
+
+                        "Tuning Into Life’s Rhythm" is a series of articles that invite you to explore the art of living in harmony—with yourself, with others, and with the world around you. Just as music is beautiful because of its dynamic tones, life is meaningful because of the pauses, changes in tempo, and harmonies created from imperfections.
+                
+                        Here, we talk about:
+                        ✨ Mindfulness – Being fully present in every moment.
+                        ✨ Passion & Creativity – Finding the flow of life that makes the soul sing.
+                        ✨ Balance – Learning to dance between busyness and stillness.
+                        
+                        Life is not about fast or slow tempo, but about how we navigate it with full awareness.
+                        
+                        What is your rhythm today? 🎶</p>
+                    
+                    <!-- Share Section -->
+                    <div class="share-section">
+                        <h4>Share This Article</h4>
+                        <div class="share-buttons">
+                            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                            <a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i> Pinterest</a>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="navigation-buttons">
+                        <a href="#" class="nav-btn"><i class="fas fa-arrow-left"></i>Previous Article</a>
+                        <a href="#" class="nav-btn">Next Article<i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Related Posts -->
+                <section class="related-posts">
+                    <h3>Related Articles</h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card post-card">
+                                <img src="img/cat chaos.jpg" class="card-img-top" alt="Related Post">
+                                <div class="card-body">
+                                    <h5 class="card-title">Melodies Between the City’s Chaos</h5>
+                                    <p class="card-text">The city's noise may be loud, but within its chaos lies a hidden rhythm. Beneath the rushing footsteps and echoing engines, soft melodies rise — from a lone busker strumming his guitar to laughter spilling from corner cafés. In that moment, the city no longer feels overwhelming; it feels alive, breathing, and singing with you.</p>
+                                    <a href="#" class="btn btn-link p-0">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card post-card">
+                                <img src="img/rain cat.jpg" class="card-img-top" alt="Related Post">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rain and Harmony at the Edge of Dusk</h5>
+                                    <p class="card-text">The evening rain whispers against the windows, creating a gentle percussion only the heart understands. Somewhere, an old piano hums quietly, blending perfectly with the storm’s soft lullaby. In that simple harmony of water and keys, a forgotten dream stirs — fragile, but beautiful enough to stay with you long after the rain fades.                              </p>
+                                    <a href="#" class="btn btn-link p-0">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card post-card">
+                                <img src="img/sunglasses.jpg" class="card-img-top" alt="Related Post">
+                                <div class="card-body">
+                                    <h5 class="card-title">Footsteps Dancing on Endless Roads</h5>
+                                    <p class="card-text">Dust swirls under every step, carried by winds that seem to sing of places yet to be found. Every footfall strikes the ground like a drumbeat of freedom. The road stretches endlessly ahead, but it’s not a race — it's a dance. A rhythm between earth and soul, pulling you closer to the unknown, where real stories begin.</p>
+                                    <a href="#" class="btn btn-link p-0">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Comments Section -->
+                <section class="comments-section">
+                    <h3>Comment (5)</h3>
+                    <div class="comment">
+                        <div class="d-flex">
+                            <img src="img/san.jpg" class="rounded-circle me-3" alt="User">
+                            <div>
+                                <h5>Ikhsan Fauzi</h5>
+                                <p class="text-muted">2 hours ago</p>
+                                <p>Very interesting and informative article!</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                        <div class="comment">
+                            <div class="d-flex">
+                                <img src="img/me.jpg" class="rounded-circle me-3" alt="User">
+                                <div>
+                                    <h5>Lyly</h5>
+                                    <p class="text-muted">5 hours ago</p>
+                                    <p>Very touching and inspiring article. Thank you for sharing such an interesting perspective on life and music.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="comment">
+                            <div class="d-flex">
+                                <img src="img/jung.jpg" class="rounded-circle me-3" alt="User">
+                                <div>
+                                    <h5>Budi Santoso</h5>
+                                    <p class="text-muted">1 day ago</p>
+                                    <p>I love how you relate music to everyday life. It really opens up a new perspective!</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="comment">
+                            <div class="d-flex">
+                                <img src="img/karinaa.jpg" class="rounded-circle me-3" alt="User">
+                                <div>
+                                    <h5>Rina Putri</h5>
+                                    <p class="text-muted">2 days ago</p>
+                                    <p>Beautiful and profound writing. Reminding us to always listen to the rhythm of life around us.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="comment">
+                            <div class="d-flex">
+                                <img src="img/mingyu.jpg" class="rounded-circle me-3" alt="User">
+                                <div>
+                                    <h5>Ahmad Rizki</h5>
+                                    <p class="text-muted">3 days ago</p>
+                                    <p>Great article! I am inspired to pay more attention to 'music' in my daily life.</p>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+
+                <!-- Comment Form -->
+                <section class="comment-form">
+                    <h3>Leave a Comment</h3>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <textarea class="form-control" rows="5" placeholder="Your comments"></textarea>
+                        <button type="submit" class="btn-submit">Kirim Komentar</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
